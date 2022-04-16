@@ -121,7 +121,7 @@ def runGame():
                     pygame.draw.rect(screen, GRAY, pygame.Rect(column_index * CELL_SIZE, row_index * CELL_SIZE, CELL_SIZE, CELL_SIZE)) #커버
                 if tile['flag']: 
                     v_image = small_font.render('v', True, BLACK)
-                    screen.blit(v_image, (column_index * CELL_SIZE + 10, row_index * CELL_SIZE + 10)) 
+                    screen.blit(v_image, (column_index * CELL_SIZE + 15, row_index * CELL_SIZE + 15)) 
                 pygame.draw.rect(screen, WHITE, pygame.Rect(column_index * CELL_SIZE, row_index * CELL_SIZE, CELL_SIZE, CELL_SIZE), 1)
 
         if game_over > 0:
