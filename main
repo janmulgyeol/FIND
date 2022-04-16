@@ -126,10 +126,10 @@ def runGame():
 
         if game_over > 0:
             if game_over == SUCCESS:
-                success_image = large_font.render('Success', True, RED)
+                success_image = large_font.render('Success!', True, RED)
                 screen.blit(success_image, success_image.get_rect(centerx=SCREEN_WIDTH // 2, centery=SCREEN_HEIGHT // 2))
             elif game_over == FAILURE:
-                failure_image = large_font.render('Failure', True, RED)
+                failure_image = large_font.render('Failed!', True, RED)
                 screen.blit(failure_image, failure_image.get_rect(centerx=SCREEN_WIDTH // 2, centery=SCREEN_HEIGHT // 2))
 
         pygame.display.update() 
