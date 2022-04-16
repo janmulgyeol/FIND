@@ -112,7 +112,7 @@ def runGame():
             for row_index in range(ROW_COUNT):
                 tile = grid[row_index][column_index]
                 if tile['mine_count_around']:
-                    mine_count_around_image = small_font.render('{}'.format(tile['mine_count_around']), True, YELLOW)
+                    mine_count_around_image = small_font.render('{}'.format(tile['mine_count_around']), True, WHITE)
                     screen.blit(mine_count_around_image, mine_count_around_image.get_rect(centerx=column_index * CELL_SIZE + CELL_SIZE // 2, centery=row_index * CELL_SIZE + CELL_SIZE // 2))
                 if tile['mine']: 
                     mine_image = small_font.render('x', True, RED)
@@ -120,7 +120,7 @@ def runGame():
                 if not tile['open']:
                     pygame.draw.rect(screen, GRAY, pygame.Rect(column_index * CELL_SIZE, row_index * CELL_SIZE, CELL_SIZE, CELL_SIZE)) #커버
                 if tile['flag']: 
-                    v_image = small_font.render('v', True, WHITE)
+                    v_image = small_font.render('v', True, BLACK)
                     screen.blit(v_image, (column_index * CELL_SIZE + 10, row_index * CELL_SIZE + 10)) 
                 pygame.draw.rect(screen, WHITE, pygame.Rect(column_index * CELL_SIZE, row_index * CELL_SIZE, CELL_SIZE, CELL_SIZE), 1)
 
